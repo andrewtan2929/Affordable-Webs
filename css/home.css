@@ -1,0 +1,252 @@
+/* Home Page Styles with full-page layout */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #eef2f7; /* lighter background than services page */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Wrapper to control full-page flex layout */
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    margin: 0 15px;
+    font-weight: 500;
+    color: white;
+}
+
+nav a:hover {
+    color: #fbbf24; /* accent color */
+}
+
+/* Main Content */
+main.container {
+    flex: 1;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Hero Section */
+.hero {
+    background: url('../images/home-hero.jpg') no-repeat center center/cover;
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 20px 5px; /* reduced from 120px to ~85px (≈30% less) */
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.hero h1, .hero p, .hero button {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    background-color: #fbbf24;
+    color: #1e3a8a;
+    border-radius: 5px;
+    padding: 12px 25px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #e09e1f;
+    color: white;
+}
+
+
+/* Home Services Preview Section */
+/* Container for home sections side by side */
+.home-sections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; /* spacing between the two sections */
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+/* Each section takes roughly half width */
+.home-sections section {
+    flex: 1 1 45%; /* grow, shrink, basis */
+    background-color: #fff;
+    padding: 25px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Section headings */
+.home-sections h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8em;
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+.home-sections p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Lists in services preview */
+.home-services-preview ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.home-services-preview ul li {
+    margin-bottom: 10px;
+}
+
+/* CTA buttons */
+.home-sections .cta-button {
+    display: inline-block;
+    background-color: #fbbf24;
+    color: #1e3a8a;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.home-sections .cta-button:hover {
+    background-color: #e09e1f;
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .home-sections {
+        flex-direction: column;
+    }
+
+    .home-sections section {
+        flex: 1 1 100%;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+}
+
+
+/* NAVIGATION BAR */
+nav {
+  background-color: #0a2a43;
+  padding: 0.5rem 2rem;
+  text-align: left;
+}
+
+.nav-logo {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.nav-logo img {
+  height: 40px;
+  width: auto;
+}
+
+.nav-links {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 2rem;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f0c330;
+}
+
+/* SITE TITLE BELOW NAV */
+.site-title {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.site-title h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0a2a43;
+}

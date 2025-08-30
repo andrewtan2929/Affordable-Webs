@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta -->
+  <title>Contact | AhbeeWeb</title>
+  <meta name="description" content="Get in touch with AhbeeWeb. Contact us for affordable professional websites for small businesses.">
+
+  <!-- Fonts + CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- NAVIGATION -->
+    <nav>
+      <div class="nav-logo">
+        <a href="index.html"><img src="images/logo/AhbeeWeb.png" alt="AhbeeWeb Logo"></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- PAGE TITLE -->
+    <header class="site-title">
+      <h1>Contact Us</h1>
+      <p>We’d love to hear from you. Send us a message or reach out directly.</p>
+    </header>
+
+    <!-- CONTACT CONTENT -->
+    <main class="container contact-container">
+
+      <!-- LEFT: FORM -->
+        <section class="contact-form">
+          <h2>Send a Message</h2>
+          <form name="contact" method="POST" data-netlify="true" action="thank-you.html">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mobile">Mobile</label>
+            <input type="tel" id="mobile" name="mobile" placeholder="+61 4 1234 5678" pattern="[0-9+ ]{8,15}" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <button type="submit" class="cta-button">Send Message</button>
+          </form>
+        </section>
+
+      <!-- RIGHT: DIRECT CONTACT INFO -->
+      <section class="contact-info">
+        <h2>Get in Touch</h2>
+        <p>Email: <a href="mailto:ahbeeweb@gmail.com">ahbeeweb@gmail.com</a></p>
+        <p>Mobile: +61 4 0387 2586</p>
+        <p>Follow us:</p>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>&copy; 2025 AhbeeWeb. All rights reserved.</p>
+      <p>Email: ahbeeweb@gmail.com | Mobile: +61 4 0387 2586</p>
+      <p>
+        <a href="#">Facebook</a> |
+        <a href="#">Instagram</a> |
+        <a href="#">LinkedIn</a>
+      </p>
+    </footer>
+
+  </div>
+</body>
+</html>

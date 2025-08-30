@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>AhbeeWeb | Portfolio</title>
+  <meta name="description" content="AhbeeWeb portfolio showcasing websites designed for small businesses. Affordable, professional, and mobile-friendly designs." />
+  <meta name="keywords" content="web design portfolio, small business websites, responsive websites, affordable web design">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AhbeeWeb | Portfolio" />
+  <meta property="og:description" content="Browse websites created by AhbeeWeb for small businesses. Professional and affordable web design." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/logo/AhbeeWeb.png" />
+  <meta property="og:url" content="https://yourdomain.netlify.app/galleries.html" />
+
+  <!-- Fonts & Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="css/portfolio.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- HEADER / NAVIGATION -->
+    <header>
+      <nav>
+        <div class="nav-logo">
+          <a href="index.html">
+            <img src="images/logo/AhbeeWeb.png" alt="AhbeeWeb Logo" />
+          </a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html" class="active">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-title">
+        <h1>Our Portfolio</h1>
+        <p>Showcasing websites we’ve designed for small businesses.</p>
+      </div>
+    </header>
+
+    <main class="container">
+
+      <!-- Portfolio Grid -->
+      <section class="gallery-grid">
+        <div class="gallery-item">
+          <img src="images/web_photos/1.png" alt="Website Project 1" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/web_photos/2.png" alt="Website Project 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/web_photos/3.png" alt="Website Project 3" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/web_photos/4.png" alt="Website Project 4" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/web_photos/5.png" alt="Website Project 5" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/web_photos/6.png" alt="Website Project 6" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/web_photos/7.png" alt="Website Project 7" />
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="portfolio-cta">
+        <h2>Like what you see?</h2>
+        <p>Contact us today to get a professional website for your business.</p>
+        <a href="contact.html"><button class="cta-button">Start Your Website</button></a>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>&copy; 2025 AhbeeWeb. All rights reserved.</p>
+      <p>Email: ahbeeweb@gmail.com | Mobile: +61 4 0387 2586</p>
+      <p>
+        <a href="#">Facebook</a> |
+        <a href="#">Instagram</a> |
+        <a href="#">LinkedIn</a>
+      </p>
+    </footer>
+    <script>
+        document.querySelectorAll('.gallery-item img').forEach(img => {
+            img.addEventListener('click', () => {
+                const modal = document.createElement('div');
+                modal.style.position = 'fixed';
+                modal.style.top = 0;
+                modal.style.left = 0;
+                modal.style.width = '100%';
+                modal.style.height = '100%';
+                modal.style.background = 'rgba(0,0,0,0.8)';
+                modal.style.display = 'flex';
+                modal.style.alignItems = 'center';
+                modal.style.justifyContent = 'center';
+                modal.style.zIndex = 1000;
+
+                const modalImg = document.createElement('img');
+                modalImg.src = img.src;
+                modalImg.style.maxWidth = '90%';
+                modalImg.style.maxHeight = '90%';
+                modal.appendChild(modalImg);
+
+                modal.addEventListener('click', () => modal.remove());
+                document.body.appendChild(modal);
+            });
+        });
+        </script>
+  </div>
+</body>
+</html>
