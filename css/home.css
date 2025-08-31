@@ -318,7 +318,7 @@ nav {
   .home-contact-cta {
     padding: 15px 18px;        /* reduce internal padding */
     margin-top: 20px;          /* spacing from previous section */
-    margin-bottom: 20px;       /* spacing before footer */
+    margin-bottom: 5px;       /* spacing before footer */
   }
 
   /* Container adjustments to prevent stretching */
