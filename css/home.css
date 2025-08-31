@@ -303,12 +303,12 @@ nav {
   }
   .home-sections section {
     flex: 1 1 calc(50% - 10px);
-    padding: 22px 18px;
+    padding: 12px 18px;         /* 22px 18px */
   }
 
   /* reduce space below contact CTA for tablet */
   .home-contact-cta {
-      margin-bottom: 15px;
+      margin-bottom: 2px;      /* 15px */
   }
 }
 
