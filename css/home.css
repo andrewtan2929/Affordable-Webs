@@ -384,9 +384,13 @@ nav {
   margin-top: 10px;         /* 30px */
 }
 
-/* === Tablet (768px – 1024px) === */
-@media (max-width: 1024px) {
-  /* Hero adjustments */
+/* === Tablet (768px – 1024px) === */ /* Hero adjustments */
+@media only screen and (min-width: 640px) and (max-width: 1024px) and (orientation: portrait) {
+ /* CSS FOR TABLET LANDSCAPE */
+ }
+@media only screen and (min-width: 640px) and (max-width: 1024px) and (orientation: landscape) {
+ /* CSS FOR TABLET LANDSCAPE */
+ }
   .hero {
     padding: 20px 15px;       /* smaller top/bottom padding */
     margin-bottom: 10px;      /* spacing below hero */
