@@ -302,8 +302,13 @@ nav {
     justify-content: space-between;
   }
   .home-sections section {
-    flex: 1 1 calc(50% - 10px);   /* two columns with smaller gap */
+    flex: 1 1 calc(50% - 10px);
     padding: 22px 18px;
+  }
+
+  /* reduce space below contact CTA for tablet */
+  .home-contact-cta {
+      margin-bottom: 15px;
   }
 }
 
