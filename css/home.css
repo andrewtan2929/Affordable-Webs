@@ -300,32 +300,31 @@ nav {
   /* Home sections layout */
   .home-sections {
     display: flex;
-    flex-wrap: wrap;       /* two columns side by side */
-    gap: 20px;             /* small gap between sections */
+    flex-wrap: wrap;        /* two columns side by side */
+    gap: 20px;              /* spacing between columns */
     justify-content: space-between;
+    margin-top: 20px;       /* optional top spacing for balance */
+    margin-bottom: 20px;    /* optional bottom spacing for balance */
   }
+
   .home-sections section {
-    flex: 1 1 48%;         /* two columns */
-    padding: 20px 18px;    /* equal top & bottom padding */
-    margin: 0;             /* remove extra margin */
+    flex: 1 1 48%;          /* two columns with 48% width */
+    padding: 20px 18px;     /* reduce padding to match top/bottom spacing */
   }
 
-  .home-sections section h2,
-  .home-sections section p {
-    margin-top: 0;         /* remove top margin */
-    margin-bottom: 10px;   /* consistent bottom spacing */
-  }
-
+  /* Contact CTA spacing */
   .home-contact-cta {
-    margin-top: 0;
-    margin-bottom: 20px;   /* matches top padding for balance */
+    margin-top: 0;           /* remove extra top margin */
+    margin-bottom: 0;        /* remove extra bottom margin */
+    padding-bottom: 10px;    /* optional: small internal padding */
   }
 
-  /* Reduce main container stretching for tablet */
+  /* Container adjustments to prevent stretching */
   main.container {
     flex: unset;
   }
 }
+
 
 /* === Mobile (below 768px) === */
 @media (max-width: 767px) {
