@@ -15,7 +15,7 @@ html, body {
 
 body {
     font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
+    line-height: 1.2;       /* 1.6; */
     background-color: #eef2f7; /* lighter background than services page */
     color: #333;
     display: flex;
@@ -61,7 +61,7 @@ main.container {
     flex: 1;
     width: 90%;
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 20px auto;          /* 20px auto; */
 }
 
 /* Hero Section */
@@ -70,7 +70,7 @@ main.container {
     position: relative;
     color: white;
     text-align: center;
-    padding: 5px 5px;
+    padding: 2px 2px;          /* 5px 5px */
     border-radius: 10px;
     margin-bottom: 5px;        /* 40px */
 }
@@ -92,13 +92,13 @@ main.container {
 
 .hero h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 2.2em;           /* 2.5em */
-    margin-bottom: 15px;
+    font-size: 2em;           /* 2.5em */
+    margin-bottom: 5px;         /* 15px */
 }
 
 .hero p {
     font-size: 1.2em;
-    margin-bottom: 20px;
+    margin-bottom: 10px;        /* 20px */
 }
 
 .hero button {
