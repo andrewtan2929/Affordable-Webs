@@ -255,29 +255,49 @@ nav {
 
 /* === Laptop (992px – 1199px) === */
 @media (max-width: 1199px) and (min-width: 992px) {
-  /* Label: Laptop screens */
+  /* Adjust hero section similar to desktop */
+  .hero {
+    padding: 20px 15px;         /* desktop padding reference */
+    margin-bottom: 20px;        /* reduce extra gap */
+  }
   .hero h1 {
-    font-size: 2.3em;
+    font-size: 2.5em;           /* closer to desktop size */
+    margin-bottom: 10px;
+  }
+  .hero p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+  }
+  .home-sections {
+    gap: 40px;                  /* match desktop spacing */
   }
   .home-sections section {
     flex: 1 1 48%;
+    padding: 25px 20px;         /* desktop padding */
   }
 }
 
 /* === Tablet (768px – 991px) === */
 @media (max-width: 991px) and (min-width: 768px) {
-  /* Label: Tablet screens */
+  .hero {
+    padding: 15px 10px;         /* slightly smaller than desktop */
+    margin-bottom: 15px;
+  }
   .hero h1 {
-    font-size: 2em;
+    font-size: 2.2em;           /* intermediate between desktop & mobile */
+    margin-bottom: 8px;
   }
   .hero p {
     font-size: 1.1em;
+    margin-bottom: 12px;
   }
   .home-sections {
     flex-direction: column;
+    gap: 25px;                  /* reduced vertical spacing */
   }
   .home-sections section {
     flex: 1 1 100%;
+    padding: 22px 18px;         /* closer to desktop feel */
   }
 }
 
