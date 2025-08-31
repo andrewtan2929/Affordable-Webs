@@ -181,7 +181,7 @@ footer {
     background-color: #1e3a8a;
     color: white;
     text-align: center;
-    padding: 5px 0;        /* 15px */
+    padding: 10px 0;        /* 15px */
     font-size: 0.9em;
 }
 
@@ -287,7 +287,7 @@ nav {
 
 /* === Tablet (768px – 991px) === */
 @media (max-width: 991px) and (min-width: 768px) {
-  /* Hero section adjustments */
+  /* Hero adjustments */
   .hero h1 {
     font-size: 2.2em;
     margin-bottom: 10px;
@@ -300,24 +300,21 @@ nav {
   /* Home sections layout */
   .home-sections {
     display: flex;
-    flex-wrap: wrap;      /* keep two columns, allow wrapping */
-    gap: 25px;
+    flex-wrap: wrap;       /* keep two columns side by side */
+    gap: 25px;             /* spacing between sections */
     justify-content: space-between;
   }
   .home-sections section {
-    flex: 1 1 48%;        /* two columns for tablet */
-    padding: 22px 18px;   /* closer to desktop feel */
+    flex: 1 1 48%;         /* two columns */
+    padding: 22px 18px;
   }
 
-  /* Reduce vertical space below Contact CTA */
+  /* Reduce spacing below Contact CTA for tablet */
+  main.container {
+    flex: unset;           /* remove vertical stretching */
+  }
   .home-contact-cta {
-    margin-bottom: 8px;   /* ~50% reduction (from default ~15px) */
-  }
-
-  /* Optional: ensure footer top padding stays consistent */
-  footer {
-    margin-top: 0;        /* remove extra margin if any */
-    padding-top: 15px;    /* keep footer content padding intact */
+    margin-bottom: 8px;    /* reduce spacing closer to footer */
   }
 }
 
