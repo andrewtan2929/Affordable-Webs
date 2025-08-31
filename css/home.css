@@ -285,43 +285,41 @@ nav {
   }
 }
 
-/* === Tablet (768px – 991px) === */
 @media (max-width: 991px) and (min-width: 768px) {
-  /* Hero section adjustments */
-  .hero {
-    padding: 15px 10px;
-    margin-bottom: 15px;
-  }
+  /* Hero spacing (unchanged or slight tweak if needed) */
   .hero h1 {
     font-size: 2.2em;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
   .hero p {
     font-size: 1.1em;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
 
-  /* Home sections - two columns with tighter spacing */
+  /* Home sections */
   .home-sections {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;                 /* smaller gap between sections */
+    gap: 12px;               /* reduced from 25px */
+    margin-bottom: 10px;     /* reduced from 20px */
     justify-content: space-between;
   }
+
   .home-sections section {
-    flex: 1 1 calc(50% - 7.5px); /* two columns */
-    padding: 15px 18px;          /* slightly smaller padding */
-    margin-bottom: 0;            /* remove extra spacing below */
-  }
-  .home-sections section:last-child {
-    margin-bottom: 0;            /* ensure last section doesn't push contact CTA */
+    flex: 1 1 calc(50% - 6px); /* two columns */
+    padding: 12px 18px;        /* slightly reduced padding */
   }
 
-  /* Contact CTA adjustments for tablet */
+  /* Contact CTA spacing */
   .home-contact-cta {
-      margin-top: 10px;       /* reduce space from sections above */
-      margin-bottom: 5px;     /* reduce space before footer */
-      padding: 10px 0;        /* optional, tighten inside content */
+    margin-top: 5px;           /* reduce top spacing */
+    margin-bottom: 5px;        /* reduce bottom spacing */
+    padding: 5px 0;            /* reduce inner padding */
+  }
+
+  /* Prevent flex stretch from adding extra space */
+  .page-wrapper {
+    min-height: auto;
   }
 }
 
