@@ -255,37 +255,29 @@ nav {
 
 /* === Laptop (992px – 1199px) === */
 @media (max-width: 1199px) and (min-width: 992px) {
+  /* Label: Laptop screens */
   .hero h1 {
-    font-size: 2.5em;
-  }
-  .hero p {
-    font-size: 1.2em;
-  }
-  .home-sections {
-    display: flex;
-    flex-wrap: wrap;      /* allow wrapping */
-    gap: 40px;
+    font-size: 2.3em;
   }
   .home-sections section {
-    flex: 1 1 48%;        /* two columns */
+    flex: 1 1 48%;
   }
 }
 
 /* === Tablet (768px – 991px) === */
 @media (max-width: 991px) and (min-width: 768px) {
+  /* Label: Tablet screens */
   .hero h1 {
-    font-size: 2.2em;
+    font-size: 2em;
   }
   .hero p {
     font-size: 1.1em;
   }
   .home-sections {
-    display: flex;
-    flex-wrap: wrap;      /* keep two columns, allow wrapping */
-    gap: 25px;
+    flex-direction: column;
   }
   .home-sections section {
-    flex: 1 1 48%;        /* two columns for tablet */
+    flex: 1 1 100%;
   }
 }
 
