@@ -380,8 +380,8 @@ nav {
 /* On tablets and smaller, reduce spacing */
 @media (max-width: 1024px) {
   .hero {
-    padding: 40px 15px;
-    margin-bottom: 25px;
+    padding: 10px 15px;         /* 40px top bottom 15px right left */
+    margin-bottom: 25px;        /* 25px */
   }
 
   .home-sections {
