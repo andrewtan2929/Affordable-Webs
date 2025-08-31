@@ -301,7 +301,7 @@ nav {
   .home-sections {
     display: flex;
     flex-wrap: wrap;       /* keep two columns side by side */
-    gap: 25px;             /* spacing between sections */
+    gap: 0px;             /* spacing between sections */
     justify-content: space-between;
   }
   .home-sections section {
