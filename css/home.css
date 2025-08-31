@@ -287,6 +287,7 @@ nav {
 
 /* === Tablet (768px – 991px) === */
 @media (max-width: 991px) and (min-width: 768px) {
+
   /* Hero adjustments */
   .hero h1 {
     font-size: 2.2em;
@@ -300,23 +301,24 @@ nav {
   /* Home sections layout */
   .home-sections {
     display: flex;
-    flex-wrap: wrap;        /* two columns side by side */
-    gap: 20px;              /* spacing between columns */
+    flex-wrap: wrap;           /* keep two columns side by side */
+    gap: 20px;                 /* spacing between columns */
     justify-content: space-between;
-    margin-top: 20px;       /* optional top spacing for balance */
-    margin-bottom: 20px;    /* optional bottom spacing for balance */
+    margin-top: 20px;          /* spacing above first section */
+    margin-bottom: 0;          /* remove extra spacing below last section */
   }
 
   .home-sections section {
-    flex: 1 1 48%;          /* two columns with 48% width */
-    padding: 20px 18px;     /* reduce padding to match top/bottom spacing */
+    flex: 1 1 48%;             /* two columns width */
+    padding: 20px 18px;        /* internal padding for content */
+    margin-bottom: 0;           /* remove default bottom margin */
   }
 
-  /* Contact CTA spacing */
+  /* Contact CTA adjustments */
   .home-contact-cta {
-    margin-top: 0;           /* remove extra top margin */
-    margin-bottom: 0;        /* remove extra bottom margin */
-    padding-bottom: 10px;    /* optional: small internal padding */
+    padding: 15px 18px;        /* reduce internal padding */
+    margin-top: 20px;          /* spacing from previous section */
+    margin-bottom: 20px;       /* spacing before footer */
   }
 
   /* Container adjustments to prevent stretching */
