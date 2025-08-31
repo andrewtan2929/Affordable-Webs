@@ -389,6 +389,13 @@ nav {
   }
 }
 
+@media (max-width: 1024px) {
+  .hero {
+    min-height: 250px;
+  }
+}
+
+
 /* On very small phones */
 @media (max-width: 600px) {
   .hero {
