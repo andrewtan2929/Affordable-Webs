@@ -285,8 +285,9 @@ nav {
   }
 }
 
+/* === Tablet (768px – 991px) === */
 @media (max-width: 991px) and (min-width: 768px) {
-  /* Hero spacing (unchanged or slight tweak if needed) */
+  /* Hero section adjustments */
   .hero h1 {
     font-size: 2.2em;
     margin-bottom: 10px;
@@ -296,30 +297,27 @@ nav {
     margin-bottom: 12px;
   }
 
-  /* Home sections */
+  /* Home sections layout */
   .home-sections {
     display: flex;
-    flex-wrap: wrap;
-    gap: 12px;               /* reduced from 25px */
-    margin-bottom: 10px;     /* reduced from 20px */
+    flex-wrap: wrap;      /* keep two columns, allow wrapping */
+    gap: 25px;
     justify-content: space-between;
   }
-
   .home-sections section {
-    flex: 1 1 calc(50% - 6px); /* two columns */
-    padding: 12px 18px;        /* slightly reduced padding */
+    flex: 1 1 48%;        /* two columns for tablet */
+    padding: 22px 18px;   /* closer to desktop feel */
   }
 
-  /* Contact CTA spacing */
+  /* Reduce vertical space below Contact CTA */
   .home-contact-cta {
-    margin-top: 5px;           /* reduce top spacing */
-    margin-bottom: 5px;        /* reduce bottom spacing */
-    padding: 5px 0;            /* reduce inner padding */
+    margin-bottom: 8px;   /* ~50% reduction (from default ~15px) */
   }
 
-  /* Prevent flex stretch from adding extra space */
-  .page-wrapper {
-    min-height: auto;
+  /* Optional: ensure footer top padding stays consistent */
+  footer {
+    margin-top: 0;        /* remove extra margin if any */
+    padding-top: 15px;    /* keep footer content padding intact */
   }
 }
 
