@@ -1,5 +1,8 @@
-/* Full-page layout with footer at bottom */
+/* ============================================================
+   SERVICES PAGE STYLES – Base (applies to all devices)
+   ============================================================ */
 
+/* Full-page layout with footer at bottom */
 * {
     margin: 0;
     padding: 0;
@@ -37,6 +40,7 @@ header {
 header h1 {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
+    color: yellow; /* override for this page */
 }
 
 nav {
@@ -55,7 +59,7 @@ nav a:hover {
 
 /* Main content */
 main.container {
-    flex: 1; /* ensures main content stretches to push footer down */
+    flex: 1;
     width: 90%;
     max-width: 1200px;
     margin: 20px auto;
@@ -65,10 +69,6 @@ main.container {
 .services-intro {
     text-align: center;
     margin-bottom: 40px;
-}
-
-header h1 {
-    color: yellow;
 }
 
 .services-intro h1 {
@@ -178,15 +178,69 @@ nav {
     color: #f0c330;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1000px) {
-    .service-item {
-        width: 45%; /* two per row */
-    }
+
+/* ============================================================
+   RESPONSIVE MEDIA QUERIES
+   ============================================================ */
+
+/* === Large Desktop (1200px and up) === */
+@media (min-width: 1200px) {
+  /* Label: Desktop widescreen */
+  .services-intro h1 {
+    font-size: 3em;
+  }
+  .service-item {
+    width: 320px; /* more breathing room */
+  }
 }
 
-@media (max-width: 600px) {
-    .service-item {
-        width: 90%; /* full width on mobile */
-    }
+/* === Laptop (992px – 1199px) === */
+@media (max-width: 1199px) and (min-width: 992px) {
+  /* Label: Laptop screens */
+  .service-item {
+    width: 280px;
+  }
+}
+
+/* === Tablet (768px – 991px) === */
+@media (max-width: 991px) and (min-width: 768px) {
+  /* Label: Tablet screens */
+  .service-item {
+    width: 45%; /* two per row */
+  }
+  .services-intro h1 {
+    font-size: 2.2em;
+  }
+  .services-intro p {
+    font-size: 1.1em;
+  }
+}
+
+/* === Mobile (below 768px) === */
+@media (max-width: 767px) {
+  /* Label: Mobile screens */
+  nav {
+    text-align: center;
+  }
+  .nav-links {
+    display: block;
+    margin: 1rem 0 0 0;
+  }
+  .nav-links li {
+    display: block;
+    margin: 0.5rem 0;
+  }
+  .service-item {
+    width: 90%; /* full width */
+  }
+  .services-intro h1 {
+    font-size: 2em;
+  }
+  .services-intro p {
+    font-size: 1em;
+  }
+}
+
+* {
+  outline: 1px solid rgba(255,0,0,0.1);
 }
