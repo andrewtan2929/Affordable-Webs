@@ -377,24 +377,18 @@ nav {
   margin-top: 10px;         /* 30px */
 }
 
-/* On tablets and smaller, reduce spacing */
+/* Tablet adjustments only */
 @media (max-width: 1024px) {
   .hero {
-    padding: 0px 15px;         /* 40px top bottom 15px right left */
-    margin-bottom: 0px;        /* 25px */
+    padding: 0px 15px !important;   /* remove top/bottom padding, keep small left/right */
+    margin-bottom: 0px !important;  /* remove extra space below */
+    min-height: 250px !important;   /* shrink hero height */
   }
 
   .home-sections {
-    margin-top: 0px;        /* 15px */
+    margin-top: 0px !important;     /* tighten spacing above sections */
   }
 }
-
-@media (max-width: 1024px) {
-  .hero {
-    min-height: 250px;
-  }
-}
-
 
 /* On very small phones */
 @media (max-width: 600px) {
