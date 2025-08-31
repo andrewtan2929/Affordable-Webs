@@ -384,18 +384,29 @@ nav {
   margin-top: 10px;         /* 30px */
 }
 
-/* Tablet adjustments only */
+/* === Tablet (768px – 1024px) === */
 @media (max-width: 1024px) {
   .hero {
-    padding: 0px 15px !important;   /* remove top/bottom padding, keep small left/right */
-    margin-bottom: 0px !important;  /* remove extra space below */
-    min-height: 250px !important;   /* shrink hero height */
+    padding: 20px 15px;       /* smaller top/bottom padding */
+    margin-bottom: 10px;      /* spacing below hero */
+    min-height: auto;          /* let hero shrink naturally */
+  }
+
+  main.container {
+    flex: 1;                   /* keep main stretched to push footer down */
   }
 
   .home-sections {
-    margin-top: 0px !important;     /* tighten spacing above sections */
+    margin-top: 10px;          /* spacing above sections */
+    margin-bottom: 10px;       /* spacing below sections */
+  }
+
+  .home-contact-cta {
+    margin-bottom: 10px;       /* spacing before footer */
+    padding: 15px 18px;        /* internal spacing */
   }
 }
+
 
 /* On very small phones */
 @media (max-width: 600px) {
