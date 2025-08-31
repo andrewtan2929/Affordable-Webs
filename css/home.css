@@ -287,28 +287,41 @@ nav {
 
 /* === Tablet (768px – 991px) === */
 @media (max-width: 991px) and (min-width: 768px) {
+  /* Hero section adjustments */
+  .hero {
+    padding: 15px 10px;
+    margin-bottom: 15px;
+  }
   .hero h1 {
     font-size: 2.2em;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
   .hero p {
     font-size: 1.1em;
-    margin-bottom: 12px;        /* 12px */
+    margin-bottom: 10px;
   }
+
+  /* Home sections - two columns with tighter spacing */
   .home-sections {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;      /* 20px */
+    gap: 15px;                 /* smaller gap between sections */
     justify-content: space-between;
   }
   .home-sections section {
-    flex: 1 1 calc(50% - 10px);
-    padding: 5px 18px;         /* 22px 18px */
+    flex: 1 1 calc(50% - 7.5px); /* two columns */
+    padding: 15px 18px;          /* slightly smaller padding */
+    margin-bottom: 0;            /* remove extra spacing below */
+  }
+  .home-sections section:last-child {
+    margin-bottom: 0;            /* ensure last section doesn't push contact CTA */
   }
 
-  /* reduce space below contact CTA for tablet */
+  /* Contact CTA adjustments for tablet */
   .home-contact-cta {
-      margin-bottom: 2px;      /* 15px */
+      margin-top: 10px;       /* reduce space from sections above */
+      margin-bottom: 5px;     /* reduce space before footer */
+      padding: 10px 0;        /* optional, tighten inside content */
   }
 }
 
