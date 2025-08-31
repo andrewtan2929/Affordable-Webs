@@ -110,6 +110,7 @@ main.container {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
+    margin-bottom: 20px;   /* <-- add this line */
 }
 
 .hero button:hover {
