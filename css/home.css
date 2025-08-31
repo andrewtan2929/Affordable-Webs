@@ -300,21 +300,30 @@ nav {
   /* Home sections layout */
   .home-sections {
     display: flex;
-    flex-wrap: wrap;       /* keep two columns side by side */
-    gap: 0px;             /* spacing between sections */
+    flex-wrap: wrap;       /* two columns side by side */
+    gap: 20px;             /* small gap between sections */
     justify-content: space-between;
   }
   .home-sections section {
     flex: 1 1 48%;         /* two columns */
-    padding: 22px 18px;
+    padding: 20px 18px;    /* equal top & bottom padding */
+    margin: 0;             /* remove extra margin */
   }
 
-  /* Reduce spacing below Contact CTA for tablet */
-  main.container {
-    flex: unset;           /* remove vertical stretching */
+  .home-sections section h2,
+  .home-sections section p {
+    margin-top: 0;         /* remove top margin */
+    margin-bottom: 10px;   /* consistent bottom spacing */
   }
+
   .home-contact-cta {
-    margin-bottom: 8px;    /* reduce spacing closer to footer */
+    margin-top: 0;
+    margin-bottom: 20px;   /* matches top padding for balance */
+  }
+
+  /* Reduce main container stretching for tablet */
+  main.container {
+    flex: unset;
   }
 }
 
