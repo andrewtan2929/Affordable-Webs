@@ -369,8 +369,8 @@ nav {
 
 /* Default (desktop) stays as-is, looks good for your TV */
 .hero {
-  padding: 60px 20px;   /* keep larger padding for big screens */
-  margin-bottom: 50px;
+  padding: 20px 20px;   /* 60px 20px  keep larger padding for big screens */
+  margin-bottom: 20px;      /* 50px */
 }
 
 .home-sections {
@@ -380,8 +380,8 @@ nav {
 /* On tablets and smaller, reduce spacing */
 @media (max-width: 1024px) {
   .hero {
-    padding: 10px 15px;         /* 40px top bottom 15px right left */
-    margin-bottom: 25px;        /* 25px */
+    padding: 0px 15px;         /* 40px top bottom 15px right left */
+    margin-bottom: 0px;        /* 25px */
   }
 
   .home-sections {
