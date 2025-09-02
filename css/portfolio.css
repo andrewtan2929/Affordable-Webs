@@ -97,6 +97,7 @@ nav {
     font-size: 1.25rem;
     color: black;
     margin: 0;            /* removed top/bottom margins */
+    margin-bottom: 5px;  /* reduce space below paragraph */
     line-height: 1.1;     /* slightly tighter line-height */
 }
 
@@ -108,7 +109,8 @@ nav {
     grid-template-columns: repeat(4, minmax(200px, 1fr));
     gap: 15px;   /* reduced spacing */
     justify-content: center;
-    margin: 15px auto;  /* reduced margin */
+    margin-top: 5px;  /* pulls grid closer to the site-title */
+    margin: 5px auto;  /* reduced margin */
     max-width: 1800px;
 }
 
