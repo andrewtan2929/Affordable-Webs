@@ -27,7 +27,7 @@ body {
    PAGE WRAPPER
    ---------------------------- */
 .page-wrapper {
-    min-height: 50vh;      /* 100vh */
+    min-height: auto;      /* 100vh */
     display: flex;
     flex-direction: column;
 }
