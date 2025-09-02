@@ -265,7 +265,7 @@ footer a {
 @media (min-width: 1200px) {
   .hero h1 { font-size: 3em; margin-bottom: 15px; }
   .hero p { font-size: 1.2em; margin-bottom: 20px; }
-  .home-sections { gap: 60px; }     /* from 60px 30px worked*/
+  .home-sections { gap: 60px; }     /* from 60px 55px worked*/
   .home-sections section { flex: 1 1 calc(50% - 30px); }
 }
 
