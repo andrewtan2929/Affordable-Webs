@@ -37,7 +37,7 @@ body {
    ---------------------------- */
 nav {
     background-color: #0a2a43;
-    padding: 0.5rem 2rem;  /* changed vertical padding to ~15px */
+    padding: 5px 2rem;  /* changed vertical padding to ~15px */
     text-align: left;
 }
 
@@ -46,14 +46,14 @@ nav {
    ---------------------------- */
 .site-title {
     text-align: center;
-    padding: 15px 0;   /* changed from 20px to 15px vertical */
+    padding: 0px 0;   /* changed from 20px to 15px vertical */
 }
 
 .site-title h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 2rem;
     color: orange;         /* keep label */
-    margin-bottom: 0.5rem; /* small gap below heading (~8px) */
+    margin-bottom: 5px; /* small gap below heading (~8px) */
 }
 
 .site-title p {
