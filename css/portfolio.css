@@ -86,7 +86,7 @@ nav {
     font-family: 'Poppins', sans-serif;
     font-size: 2rem;
     color: orange;         /* #fbbf24; */
-    margin-bottom: 0.5rem;
+    margin-bottom: 0rem;        /* 0.5rem */
 }
 
 .site-title p {
