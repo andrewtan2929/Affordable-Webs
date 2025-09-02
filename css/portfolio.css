@@ -37,9 +37,10 @@ body {
    ---------------------------- */
 nav {
     background-color: #0a2a43;
-    padding: 0.5rem 2rem;
+    padding: 0.25rem 2rem;       /* 0.5rem */
     text-align: left;
 }
+
 
 .nav-logo {
     display: inline-block;
@@ -92,6 +93,8 @@ nav {
 .site-title p {
     font-size: 1.25rem;    /* 1rem */
     color: black;     /* #ffffff; */
+    margin-top: 0;    /* remove extra top margin */
+    margin-bottom: 0;     /* remove bottom margin if needed */
 }
 
 /* ----------------------------
