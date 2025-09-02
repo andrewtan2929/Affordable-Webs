@@ -27,7 +27,7 @@ body {
    PAGE WRAPPER
    ---------------------------- */
 .page-wrapper {
-    min-height: auto;      /* 100vh */
+    min-height: 100vh; /* keep full height */
     display: flex;
     flex-direction: column;
 }
@@ -37,42 +37,8 @@ body {
    ---------------------------- */
 nav {
     background-color: #0a2a43;
-    padding: 0.25rem 2rem;       /* 0.5rem */
+    padding: 0.5rem 2rem;  /* changed vertical padding to ~15px */
     text-align: left;
-}
-
-
-.nav-logo {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.nav-logo img {
-    height: 40px;
-    width: auto;
-}
-
-.nav-links {
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 2rem;
-}
-
-.nav-links li {
-    display: inline-block;
-    margin: 0 1rem;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-    color: #f0c330;
 }
 
 /* ----------------------------
@@ -80,34 +46,33 @@ nav {
    ---------------------------- */
 .site-title {
     text-align: center;
-    padding: 10px 0;        /* 20px */
+    padding: 15px 0;   /* changed from 20px to 15px vertical */
 }
 
 .site-title h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 2rem;
-    color: orange;         /* #fbbf24; */
-    margin-bottom: 0rem;        /* 0.5rem */
+    color: orange;         /* keep label */
+    margin-bottom: 0.5rem; /* small gap below heading (~8px) */
 }
 
 .site-title p {
-    font-size: 1.25rem;    /* 1rem */
-    color: black;     /* #ffffff; */
-    margin-top: 0;    /* remove extra top margin */
-    margin-bottom: 0;     /* remove bottom margin if needed */
+    font-size: 1.25rem;
+    color: black;
+    margin-top: 0;    /* removed extra top margin */
+    margin-bottom: 0; /* removed bottom margin */
 }
 
 /* ----------------------------
    GALLERY GRID
    ---------------------------- */
-/* Base for desktop default (1200px and above) */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(100px, 1fr));
-    gap: 28 px;       /* 28px */
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    gap: 15px;   /* changed from 25px to 15px vertical/horizontal gap */
     justify-content: center;
-    margin: 20px auto;
-    max-width: 1600px;
+    margin: 15px auto;  /* changed vertical margin to 15px */
+    max-width: 1800px;
 }
 
 .gallery-item {
@@ -141,20 +106,20 @@ nav {
    ---------------------------- */
 .portfolio-cta {
     text-align: center;
-    margin: 50px 0;
+    margin: 15px 0;  /* changed vertical margin to 15px */
 }
 
 .portfolio-cta h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 2rem;
     color: #1e3a8a;
-    margin-bottom: 10px;
+    margin-bottom: 15px;  /* changed from 10px to 15px */
 }
 
 .portfolio-cta p {
     font-size: 1.1em;
     color: #555;
-    margin-bottom: 20px;
+    margin-bottom: 15px;  /* changed from 20px to 15px */
 }
 
 .portfolio-cta button.cta-button {
@@ -179,7 +144,7 @@ footer {
     background-color: #1e3a8a;
     color: white;
     text-align: center;
-    padding: 15px 0;
+    padding: 15px 0;  /* kept as 15px for consistency */
     font-size: 0.9em;
 }
 
@@ -189,22 +154,22 @@ footer {
 
 /* Desktop widescreen (1200px and up) */
 @media (min-width: 1200px) {
-    .gallery-grid { grid-template-columns: repeat(4, minmax(100px, 1fr)); gap: 28px; }    /* 200px, 1fr */
+    .gallery-grid { grid-template-columns: repeat(4, minmax(200px, 1fr)); gap: 15px; } /* changed gap */
     .site-title h1 { font-size: 2.2rem; }
     .portfolio-cta h2 { font-size: 2.1rem; }
 }
 
 /* Laptop (992px – 1199px) */
 @media (max-width: 1199px) and (min-width: 992px) {
-    .gallery-grid { grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .gallery-grid { grid-template-columns: repeat(3, 1fr); gap: 15px; }  /* changed gap */
     .portfolio-cta button.cta-button { padding: 11px 22px; font-size: 15px; }
 }
 
 /* Tablet (768px – 991px) */
 @media (max-width: 991px) and (min-width: 768px) {
-    .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }  /* changed gap */
     .site-title h1 { font-size: 1.8rem; }
-    .portfolio-cta { margin-top: 40px; }
+    .portfolio-cta { margin-top: 15px; }  /* changed from 40px */
 }
 
 /* Mobile (below 768px) */
@@ -212,7 +177,7 @@ footer {
     nav { text-align: center; }
     .nav-links { display: block; margin: 1rem 0 0 0; }
     .nav-links li { display: block; margin: 0.5rem 0; }
-    .gallery-grid { grid-template-columns: 1fr; gap: 12px; }
+    .gallery-grid { grid-template-columns: 1fr; gap: 15px; } /* changed gap */
     .site-title h1 { font-size: 1.5rem; }
     .site-title p { font-size: 1rem; }
     .portfolio-cta button.cta-button { padding: 10px 14px; font-size: 14px; width: auto; }
