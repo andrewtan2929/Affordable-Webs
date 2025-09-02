@@ -79,19 +79,19 @@ nav {
    ---------------------------- */
 .site-title {
     text-align: center;
-    padding: 20px 0;
+    padding: 20px 0;        /* 20px */
 }
 
 .site-title h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 2rem;
-    color: #fbbf24;
+    color: orange;         /* #fbbf24; */
     margin-bottom: 0.5rem;
 }
 
 .site-title p {
     font-size: 1rem;
-    color: #ffffff;
+    color: dark blue;     /* #ffffff; */
 }
 
 /* ----------------------------
