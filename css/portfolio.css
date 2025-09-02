@@ -103,7 +103,7 @@ nav {
 /* Base for desktop default (1200px and above) */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
     gap: 28 px;       /* 28px */
     justify-content: center;
     margin: 20px auto;
@@ -189,7 +189,7 @@ footer {
 
 /* Desktop widescreen (1200px and up) */
 @media (min-width: 1200px) {
-    .gallery-grid { grid-template-columns: repeat(2, minmax(200px, 1fr)); gap: 28px; }    /* 200px, 1fr */
+    .gallery-grid { grid-template-columns: repeat(4, minmax(100px, 1fr)); gap: 28px; }    /* 200px, 1fr */
     .site-title h1 { font-size: 2.2rem; }
     .portfolio-cta h2 { font-size: 2.1rem; }
 }
