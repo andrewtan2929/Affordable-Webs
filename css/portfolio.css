@@ -103,11 +103,11 @@ nav {
 /* Base for desktop default (1200px and above) */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
-    gap: 5px;       /* 28px */
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    gap: 28 px;       /* 28px */
     justify-content: center;
     margin: 20px auto;
-    max-width: 1700px;
+    max-width: 1600px;
 }
 
 .gallery-item {
