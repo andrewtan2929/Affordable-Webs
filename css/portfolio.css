@@ -27,7 +27,7 @@ body {
    PAGE WRAPPER
    ---------------------------- */
 .page-wrapper {
-    min-height: 100vh;
+    min-height: 50vh;      /* 100vh */
     display: flex;
     flex-direction: column;
 }
@@ -100,10 +100,11 @@ nav {
 /* ----------------------------
    GALLERY GRID
    ---------------------------- */
+/* Base for desktop default (1200px and above) */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(250px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    gap: 28px;
     justify-content: center;
     margin: 20px auto;
     max-width: 1800px;
