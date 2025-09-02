@@ -187,7 +187,7 @@ footer {
 
 /* === Large Desktop (1200px and up) === */
 @media (min-width: 1200px) {
-  .services-intro h2 { font-size: 3em; }
+  .services-intro h2 { font-size: 2.25em; }        /* { font-size: 3em; } */
   .service-item { width: 320px; }
 }
 
