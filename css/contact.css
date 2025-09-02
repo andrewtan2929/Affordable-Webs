@@ -2,7 +2,7 @@
    CONTACT PAGE STYLES – Base (applies to all devices)
    ============================================================ */
 
-/* Base Layout */
+/* ========== 1) GLOBAL RESET & PAGE WRAPPER ========== */
 * {
   margin: 0;
   padding: 0;
@@ -27,7 +27,7 @@ body {
   flex-direction: column;
 }
 
-/* NAV BAR (same as home.css) */
+/* ========== 2) NAVIGATION BAR (top menu) ========== */
 nav {
   background-color: #0a2a43;
   padding: 0.5rem 2rem;
@@ -67,7 +67,7 @@ nav {
   color: #f0c330;
 }
 
-/* Page Title */
+/* ========== 3) PAGE TITLE (header intro text) ========== */
 .site-title {
   text-align: center;
   margin: 2rem 0;
@@ -85,7 +85,7 @@ nav {
   margin-top: 0.5rem;
 }
 
-/* Contact Container */
+/* ========== 4) MAIN CONTACT CONTAINER (holds form + info) ========== */
 .contact-container {
   flex: 1;
   display: flex;
@@ -96,7 +96,7 @@ nav {
   margin: 20px auto;
 }
 
-/* Contact Form */
+/* ========== 4a) CONTACT FORM (left column) ========== */
 .contact-form {
   flex: 1 1 55%;
   background: #fff;
@@ -144,7 +144,7 @@ nav {
   color: white;
 }
 
-/* Contact Info */
+/* ========== 4b) CONTACT INFO (right column) ========== */
 .contact-info {
   flex: 1 1 40%;
   background: #fff;
@@ -184,7 +184,7 @@ nav {
   color: #fbbf24;
 }
 
-/* Footer (same as home.css) */
+/* ========== 5) FOOTER (bottom of page) ========== */
 footer {
   background-color: #1e3a8a;
   color: white;
@@ -193,14 +193,13 @@ footer {
   font-size: 0.9em;
 }
 
-
 /* ============================================================
    RESPONSIVE MEDIA QUERIES
    ============================================================ */
 
 /* === Large Desktop (1200px and up) === */
 @media (min-width: 1200px) {
-  /* Label: Desktop widescreen */
+  /* Desktop widescreen adjustments */
   .site-title h1 { font-size: 2.4rem; }
   .contact-container { gap: 56px; }
   .contact-form h2,
@@ -209,7 +208,7 @@ footer {
 
 /* === Laptop (992px – 1199px) === */
 @media (max-width: 1199px) and (min-width: 992px) {
-  /* Label: Laptop screens */
+  /* Laptop screens adjustments */
   .contact-container { gap: 32px; }
   .contact-form { flex: 1 1 58%; }
   .contact-info { flex: 1 1 40%; }
@@ -217,7 +216,7 @@ footer {
 
 /* === Tablet (768px – 991px) === */
 @media (max-width: 991px) and (min-width: 768px) {
-  /* Label: Tablet screens */
+  /* Tablet screens adjustments */
   .contact-container {
     flex-direction: column;
     width: 92%;
@@ -234,7 +233,7 @@ footer {
 
 /* === Mobile (below 768px) === */
 @media (max-width: 767px) {
-  /* Label: Mobile screens */
+  /* Mobile screens adjustments */
   nav { text-align: center; }
   .nav-links { display: block; margin: 1rem 0 0 0; }
   .nav-links li { display: block; margin: 0.5rem 0; }
@@ -260,6 +259,7 @@ footer {
   }
 }
 
+/* DEBUGGING OUTLINE (optional, remove for live) */
 * {
   outline: 1px solid rgba(255,0,0,0.1);
 }

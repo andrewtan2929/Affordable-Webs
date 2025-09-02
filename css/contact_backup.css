@@ -1,3 +1,7 @@
+/* ============================================================
+   CONTACT PAGE STYLES – Base (applies to all devices)
+   ============================================================ */
+
 /* Base Layout */
 * {
   margin: 0;
@@ -189,9 +193,73 @@ footer {
   font-size: 0.9em;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
+
+/* ============================================================
+   RESPONSIVE MEDIA QUERIES
+   ============================================================ */
+
+/* === Large Desktop (1200px and up) === */
+@media (min-width: 1200px) {
+  /* Label: Desktop widescreen */
+  .site-title h1 { font-size: 2.4rem; }
+  .contact-container { gap: 56px; }
+  .contact-form h2,
+  .contact-info h2 { font-size: 2em; }
+}
+
+/* === Laptop (992px – 1199px) === */
+@media (max-width: 1199px) and (min-width: 992px) {
+  /* Label: Laptop screens */
+  .contact-container { gap: 32px; }
+  .contact-form { flex: 1 1 58%; }
+  .contact-info { flex: 1 1 40%; }
+}
+
+/* === Tablet (768px – 991px) === */
+@media (max-width: 991px) and (min-width: 768px) {
+  /* Label: Tablet screens */
   .contact-container {
     flex-direction: column;
+    width: 92%;
+    gap: 24px;
   }
+  .contact-form,
+  .contact-info {
+    flex: 1 1 100%;
+  }
+  .site-title h1 { font-size: 1.9rem; }
+  .contact-form h2,
+  .contact-info h2 { font-size: 1.6em; }
+}
+
+/* === Mobile (below 768px) === */
+@media (max-width: 767px) {
+  /* Label: Mobile screens */
+  nav { text-align: center; }
+  .nav-links { display: block; margin: 1rem 0 0 0; }
+  .nav-links li { display: block; margin: 0.5rem 0; }
+
+  .contact-container {
+    flex-direction: column;
+    width: 94%;
+    gap: 16px;
+  }
+  .site-title { margin: 1.5rem 0; }
+  .site-title h1 { font-size: 1.7rem; }
+  .site-title p { font-size: 0.95rem; }
+
+  .contact-form,
+  .contact-info { padding: 20px 16px; }
+
+  .contact-form input,
+  .contact-form textarea { font-size: 1rem; }
+
+  .contact-form button {
+    width: 100%;
+    padding: 14px 20px;
+  }
+}
+
+* {
+  outline: 1px solid rgba(255,0,0,0.1);
 }

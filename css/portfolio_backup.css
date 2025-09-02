@@ -1,4 +1,7 @@
-/* galleries.css */
+/* galleries.css (drop-in replacement)
+   Preserves original desktop rules exactly, then adds
+   labeled media queries for Laptop, Tablet and Mobile.
+*/
 
 /* Intro Section */
 .gallery-intro {
@@ -139,4 +142,84 @@ footer {
 
 .portfolio-cta p {
     margin-bottom: 20px; /* adds space between paragraph and button */
+}
+
+
+/* ============================================================
+   RESPONSIVE MEDIA QUERIES (labels match contact.css pattern)
+   - Desktop is preserved by default above (4 columns, minmax(400px))
+   ============================================================ */
+
+/* === Large Desktop / Widescreen (1200px and up) === */
+@media (min-width: 1200px) {
+  /* Label: Desktop widescreen */
+  /* keep your 4-column layout as-is; increase breathing room slightly */
+  .gallery-grid {
+    grid-template-columns: repeat(4, minmax(400px, 1fr));
+    gap: 28px;
+    margin: 10px auto;
+    max-width: 1800px;
+  }
+  .gallery-intro h2 { font-size: 2.1rem; }
+  .gallery-intro p { font-size: 1.25rem; }
+  .site-title h1 { font-size: 2.2rem; }
+}
+
+/* === Laptop (992px – 1199px) === */
+@media (max-width: 1199px) and (min-width: 992px) {
+  /* Label: Laptop screens */
+  /* move from 4 columns → 3 columns for typical laptop widths */
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    max-width: 1400px;
+    margin: 12px auto;
+  }
+  .gallery-intro h2 { font-size: 1.9rem; }
+  .gallery-intro p { font-size: 1.1rem; }
+  .portfolio-cta .cta-button { padding: 11px 22px; font-size: 15px; }
+}
+
+/* === Tablet (768px – 991px) === */
+@media (max-width: 991px) and (min-width: 768px) {
+  /* Label: Tablet screens */
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 900px;
+    margin: 10px auto;
+    padding: 0 8px;
+  }
+  .gallery-intro h2 { font-size: 1.7rem; }
+  .gallery-intro p { font-size: 1rem; }
+  .site-title h1 { font-size: 1.8rem; }
+  .portfolio-cta { margin-top: 40px; }
+  .portfolio-cta .cta-button { padding: 10px 20px; font-size: 15px; }
+}
+
+/* === Mobile (below 768px) === */
+@media (max-width: 767px) {
+  /* Label: Mobile screens */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    max-width: 100%;
+    margin: 6px auto;
+    padding: 0 10px;
+  }
+  .gallery-item { border-radius: 6px; }
+  .gallery-intro h2 { font-size: 1.4rem; }
+  .gallery-intro p { font-size: 0.95rem; }
+  .site-title h1 { font-size: 1.5rem; }
+  .site-title p { font-size: 1rem; }
+  .portfolio-cta { margin-top: 30px; }
+  .portfolio-cta .cta-button {
+    padding: 10px 14px;
+    font-size: 14px;
+    width: auto;
+  }
+}
+
+* {
+  outline: 1px solid rgba(255,0,0,0.1);
 }

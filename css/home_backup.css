@@ -11,6 +11,7 @@
 
 html, body {
     height: 100%;
+    margin: 0;
 }
 
 body {
@@ -20,6 +21,12 @@ body {
     color: #333;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;  /* full viewport height */
+}
+
+/* Main content stretches to push footer down */
+main {
+  flex: 1;
 }
 
 /* Wrapper to control full-page flex layout */
@@ -181,7 +188,7 @@ footer {
     background-color: #1e3a8a;
     color: white;
     text-align: center;
-    padding: 15px 0;
+    padding: 10px 0;        /* 15px */
     font-size: 0.9em;
 }
 
@@ -237,53 +244,99 @@ nav {
   color: #0a2a43;
 }
 
-
 /* ============================================================
-   RESPONSIVE MEDIA QUERIES
+   RESPONSIVE MEDIA QUERIES – HERO & HOME-SECTIONS
    ============================================================ */
 
 /* === Large Desktop (1200px and up) === */
 @media (min-width: 1200px) {
-  /* Label: Desktop widescreen */
   .hero h1 {
     font-size: 3em;
+    margin-bottom: 15px;
+  }
+  .hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
   }
   .home-sections {
+    display: flex;
+    flex-wrap: wrap;
     gap: 60px;
+    justify-content: space-between;
+  }
+  .home-sections section {
+    flex: 1 1 calc(50% - 30px);  /* two columns with gap */
+    padding: 25px 20px;
   }
 }
 
 /* === Laptop (992px – 1199px) === */
 @media (max-width: 1199px) and (min-width: 992px) {
-  /* Label: Laptop screens */
   .hero h1 {
-    font-size: 2.3em;
+    font-size: 2.5em;
+    margin-bottom: 12px;
+  }
+  .hero p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+  }
+  .home-sections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
   }
   .home-sections section {
-    flex: 1 1 48%;
+    flex: 1 1 calc(50% - 20px);  /* two columns with gap */
+    padding: 25px 20px;
   }
 }
 
 /* === Tablet (768px – 991px) === */
 @media (max-width: 991px) and (min-width: 768px) {
-  /* Label: Tablet screens */
+
+  /* Hero adjustments */
   .hero h1 {
-    font-size: 2em;
+    font-size: 2.2em;
+    margin-bottom: 10px;
   }
   .hero p {
     font-size: 1.1em;
+    margin-bottom: 12px;
   }
+
+  /* Home sections layout */
   .home-sections {
-    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;           /* keep two columns side by side */
+    gap: 20px;                 /* spacing between columns */
+    justify-content: space-between;
+    margin-top: 20px;          /* spacing above first section */
+    margin-bottom: 0;          /* remove extra spacing below last section */
   }
+
   .home-sections section {
-    flex: 1 1 100%;
+    flex: 1 1 48%;             /* two columns width */
+    padding: 20px 18px;        /* internal padding for content */
+    margin-bottom: 0;           /* remove default bottom margin */
+  }
+
+  /* Contact CTA adjustments */
+  .home-contact-cta {
+    padding: 15px 18px;        /* reduce internal padding */
+    margin-top: 20px;          /* spacing from previous section */
+    margin-bottom: 5px;       /* spacing before footer */
+  }
+
+  /* Container adjustments to prevent stretching */
+  main.container {
+    flex: unset;
   }
 }
 
+
 /* === Mobile (below 768px) === */
 @media (max-width: 767px) {
-  /* Label: Mobile screens */
   nav {
     text-align: center;
   }
@@ -300,19 +353,82 @@ nav {
   }
   .hero h1 {
     font-size: 1.8em;
+    margin-bottom: 8px;
   }
   .hero p {
     font-size: 1em;
+    margin-bottom: 12px;
   }
   .home-sections {
+    display: flex;
     flex-direction: column;
     gap: 20px;
   }
   .home-sections section {
+    flex: 1 1 100%;
     padding: 20px 15px;
   }
 }
 
-* {
-  outline: 1px solid rgba(255,0,0,0.1);
+/* ----------------------------
+   HERO + HOME SECTIONS SPACING
+   ---------------------------- */
+
+/* Default (desktop) stays as-is, looks good for your TV */
+.hero {
+  padding: 10px 20px;   /* 60px 20px  keep larger padding for big screens */
+  margin-bottom: 10px;      /* 50px */
+}
+
+.home-sections {
+  margin-top: 10px;         /* 30px */
+}
+
+/* === Tablet (768px – 1024px) === */ /* Hero adjustments */
+@media only screen and (min-width: 640px) and (max-width: 1024px) and (orientation: portrait) {
+ /* CSS FOR TABLET LANDSCAPE */
+ }
+@media only screen and (min-width: 640px) and (max-width: 1024px) and (orientation: landscape) {
+ /* CSS FOR TABLET LANDSCAPE */
+ }
+  .hero {
+    padding: 20px 15px;       /* smaller top/bottom padding */
+    margin-bottom: 10px;      /* spacing below hero */
+    min-height: 180px;         /* limit hero height on tablet */
+  }
+
+  /* Main content should not stretch if content is short */
+  main.container {
+    flex: unset;              /* remove stretching */
+  }
+
+  /* Home sections spacing */
+  .home-sections {
+    margin-top: 10px;         /* spacing above sections */
+    margin-bottom: 10px;      /* spacing below sections */
+  }
+
+  /* Contact CTA spacing */
+  .home-contact-cta {
+    margin-top: 10px;         /* spacing from previous section */
+    margin-bottom: 10px;      /* spacing before footer */
+    padding: 15px 18px;       /* internal padding */
+  }
+
+  /* Optional: reduce wrapper min-height to avoid extra white space */
+  .page-wrapper {
+    min-height: auto;
+  }
+}
+
+/* On very small phones */
+@media (max-width: 600px) {
+  .hero {
+    padding: 30px 10px;
+    margin-bottom: 20px;
+  }
+
+  .home-sections {
+    margin-top: 5px;
+  }
 }

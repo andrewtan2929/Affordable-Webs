@@ -1,131 +1,159 @@
-/* galleries.css (drop-in replacement)
-   Preserves original desktop rules exactly, then adds
-   labeled media queries for Laptop, Tablet and Mobile.
-*/
+/* ============================================================
+   PORTFOLIO PAGE STYLES – Base (applies to all devices)
+   ============================================================ */
 
-/* Intro Section */
-.gallery-intro {
-  text-align: center;
-  margin: 1.1rem 0; /* reduced from 1.3rem */
-}
-
-.gallery-intro h2 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 2rem;
-  color: #1e3a8a;
-  margin-bottom: 0.5rem; /* slightly less */
-}
-
-.gallery-intro p {
-  font-size: 1.2rem;
-  color: #555;
-}
-
-/* Gallery Grid Layout - 4 Columns */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(400px, 1fr));
-  gap: 25px; /* reduced from 30px to save vertical space */
-  max-width: 1800px; /* slightly less than 2000px to reduce vertical stretching */
-  margin: 5px auto; /* reduced vertical margin */
-  justify-content: center;
-}
-
-/* Individual Gallery Item */
-.gallery-item {
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: auto;
-}
-
-/* Hover effect for gallery item */
-.gallery-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-/* Images scaled proportionally 2x */
-.gallery-item img {
-  width: 100%;
-  height: auto;
-  max-width: none;
-  display: block;
-  transition: transform 0.3s ease;
-}
-
-/* Hover zoom effect */
-.gallery-item:hover img {
-  transform: scale(1.05);
-}
-
-/* Site Title Section */
-.site-title {
-  text-align: center;
-  padding: 20px 0; /* reduce top and bottom padding */
-  margin: 0 auto;
-}
-
-.site-title h1 {
-  font-size: 2rem;   /* reduce from larger size if needed */
-  margin: 0 0 1rem 0; /* smaller bottom margin */
-}
-
-.site-title p {
-  font-size: 1.2rem;   /* reduce from larger size if needed */
-  margin: 0;         /* remove extra space below */
-  line-height: 1;  /* compact spacing */
+/* ----------------------------
+   GLOBAL RESET & BASE STYLES
+   ---------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html, body {
     height: 100%;
-    margin: 0;
-    padding: 0;
 }
 
 body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #eef2f7;
+    color: #333;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
 
-/* Wrap the main content so footer is pushed down */
+/* ----------------------------
+   PAGE WRAPPER
+   ---------------------------- */
 .page-wrapper {
-    flex: 1;  /* take remaining space */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-/* Main content area (gallery grid + intro) */
-main {
-    flex: 1;  /* expand to fill available space */
+/* ----------------------------
+   NAVIGATION BAR
+   ---------------------------- */
+nav {
+    background-color: #0a2a43;
+    padding: 0.5rem 2rem;
+    text-align: left;
 }
 
-/* Footer */
-footer {
-    background-color: #1e3a8a;
-    color: white;
+.nav-logo {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.nav-logo img {
+    height: 40px;
+    width: auto;
+}
+
+.nav-links {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 2rem;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #f0c330;
+}
+
+/* ----------------------------
+   SITE TITLE
+   ---------------------------- */
+.site-title {
     text-align: center;
-    padding: 15px 0;
-    font-size: 0.9em;
+    padding: 20px 0;
 }
 
-/* Portfolio Call-to-Action */
+.site-title h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: #fbbf24;
+    margin-bottom: 0.5rem;
+}
+
+.site-title p {
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+/* ----------------------------
+   GALLERY GRID
+   ---------------------------- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
+    gap: 25px;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 1800px;
+}
+
+.gallery-item {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* ----------------------------
+   PORTFOLIO CTA
+   ---------------------------- */
 .portfolio-cta {
     text-align: center;
-    margin-top: 65px; /* push button further down from gallery */
-    margin-bottom: 20px; /* optional bottom spacing */
+    margin: 50px 0;
 }
 
-.portfolio-cta .cta-button {
+.portfolio-cta h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.portfolio-cta p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.portfolio-cta button.cta-button {
     padding: 12px 25px;
     font-size: 16px;
     background-color: #007BFF;
@@ -136,90 +164,59 @@ footer {
     transition: background-color 0.3s;
 }
 
-.portfolio-cta .cta-button:hover {
+.portfolio-cta button.cta-button:hover {
     background-color: #0056b3;
 }
 
-.portfolio-cta p {
-    margin-bottom: 20px; /* adds space between paragraph and button */
+/* ----------------------------
+   FOOTER
+   ---------------------------- */
+footer {
+    background-color: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
 }
-
 
 /* ============================================================
-   RESPONSIVE MEDIA QUERIES (labels match contact.css pattern)
-   - Desktop is preserved by default above (4 columns, minmax(400px))
+   RESPONSIVE MEDIA QUERIES
    ============================================================ */
 
-/* === Large Desktop / Widescreen (1200px and up) === */
+/* Desktop widescreen (1200px and up) */
 @media (min-width: 1200px) {
-  /* Label: Desktop widescreen */
-  /* keep your 4-column layout as-is; increase breathing room slightly */
-  .gallery-grid {
-    grid-template-columns: repeat(4, minmax(400px, 1fr));
-    gap: 28px;
-    margin: 10px auto;
-    max-width: 1800px;
-  }
-  .gallery-intro h2 { font-size: 2.1rem; }
-  .gallery-intro p { font-size: 1.25rem; }
-  .site-title h1 { font-size: 2.2rem; }
+    .gallery-grid { grid-template-columns: repeat(4, minmax(250px, 1fr)); gap: 28px; }
+    .site-title h1 { font-size: 2.2rem; }
+    .portfolio-cta h2 { font-size: 2.1rem; }
 }
 
-/* === Laptop (992px – 1199px) === */
+/* Laptop (992px – 1199px) */
 @media (max-width: 1199px) and (min-width: 992px) {
-  /* Label: Laptop screens */
-  /* move from 4 columns → 3 columns for typical laptop widths */
-  .gallery-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-    max-width: 1400px;
-    margin: 12px auto;
-  }
-  .gallery-intro h2 { font-size: 1.9rem; }
-  .gallery-intro p { font-size: 1.1rem; }
-  .portfolio-cta .cta-button { padding: 11px 22px; font-size: 15px; }
+    .gallery-grid { grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .portfolio-cta button.cta-button { padding: 11px 22px; font-size: 15px; }
 }
 
-/* === Tablet (768px – 991px) === */
+/* Tablet (768px – 991px) */
 @media (max-width: 991px) and (min-width: 768px) {
-  /* Label: Tablet screens */
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-    max-width: 900px;
-    margin: 10px auto;
-    padding: 0 8px;
-  }
-  .gallery-intro h2 { font-size: 1.7rem; }
-  .gallery-intro p { font-size: 1rem; }
-  .site-title h1 { font-size: 1.8rem; }
-  .portfolio-cta { margin-top: 40px; }
-  .portfolio-cta .cta-button { padding: 10px 20px; font-size: 15px; }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .site-title h1 { font-size: 1.8rem; }
+    .portfolio-cta { margin-top: 40px; }
 }
 
-/* === Mobile (below 768px) === */
+/* Mobile (below 768px) */
 @media (max-width: 767px) {
-  /* Label: Mobile screens */
-  .gallery-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-    max-width: 100%;
-    margin: 6px auto;
-    padding: 0 10px;
-  }
-  .gallery-item { border-radius: 6px; }
-  .gallery-intro h2 { font-size: 1.4rem; }
-  .gallery-intro p { font-size: 0.95rem; }
-  .site-title h1 { font-size: 1.5rem; }
-  .site-title p { font-size: 1rem; }
-  .portfolio-cta { margin-top: 30px; }
-  .portfolio-cta .cta-button {
-    padding: 10px 14px;
-    font-size: 14px;
-    width: auto;
-  }
+    nav { text-align: center; }
+    .nav-links { display: block; margin: 1rem 0 0 0; }
+    .nav-links li { display: block; margin: 0.5rem 0; }
+    .gallery-grid { grid-template-columns: 1fr; gap: 12px; }
+    .site-title h1 { font-size: 1.5rem; }
+    .site-title p { font-size: 1rem; }
+    .portfolio-cta button.cta-button { padding: 10px 14px; font-size: 14px; width: auto; }
 }
 
+/* ----------------------------
+   DEBUG OUTLINE
+   ---------------------------- */
 * {
-  outline: 1px solid rgba(255,0,0,0.1);
+    outline: 1px solid rgba(255,0,0,0.1);
 }
