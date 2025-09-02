@@ -192,8 +192,8 @@ footer {
 /* Desktop widescreen (1200px and up) */
 @media (min-width: 1200px) {
     .gallery-grid { grid-template-columns: repeat(4, minmax(200px, 1fr)); gap: 15px; }
-    .site-title h1 { font-size: 2.2rem; }
-    .portfolio-cta h2 { font-size: 2.1rem; }
+    .site-title h1 { font-size: 2rem; }
+    .portfolio-cta h2 { font-size: 1.5rem; }
 }
 
 /* Laptop (992px – 1199px) */
