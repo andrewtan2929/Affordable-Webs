@@ -33,34 +33,71 @@ body {
 }
 
 /* ----------------------------
-   NAVIGATION BAR
+   NAVIGATION BAR – tightened vertical spacing
    ---------------------------- */
 nav {
     background-color: #0a2a43;
-    padding: 5px 2rem;  /* changed vertical padding to ~15px */
+    padding: 0;  /* aggressively reduced top/bottom padding */
     text-align: left;
 }
 
+.nav-logo {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.nav-logo img {
+    height: 40px;
+    width: auto;
+}
+
+.nav-links {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 2rem;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    line-height: 1;  /* reduce link height */
+    display: inline-block;  /* ensure line-height works */
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #f0c330;
+}
+
 /* ----------------------------
-   SITE TITLE
+   SITE TITLE – pulled closer to nav
    ---------------------------- */
 .site-title {
     text-align: center;
-    padding: 0px 0;   /* changed from 20px to 15px vertical */
+    padding: 0;           /* removed vertical padding */
+    margin-top: 0;        /* ensure no extra top margin */
 }
 
 .site-title h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 2rem;
-    color: orange;         /* keep label */
-    margin-bottom: 5px; /* small gap below heading (~8px) */
+    color: orange;
+    margin: 0;            /* removed spacing below heading */
+    line-height: 1.1;     /* slightly tighter line-height */
 }
 
 .site-title p {
     font-size: 1.25rem;
     color: black;
-    margin-top: 0;    /* removed extra top margin */
-    margin-bottom: 0; /* removed bottom margin */
+    margin: 0;            /* removed top/bottom margins */
+    line-height: 1.1;     /* slightly tighter line-height */
 }
 
 /* ----------------------------
@@ -69,9 +106,9 @@ nav {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(200px, 1fr));
-    gap: 15px;   /* changed from 25px to 15px vertical/horizontal gap */
+    gap: 15px;   /* reduced spacing */
     justify-content: center;
-    margin: 15px auto;  /* changed vertical margin to 15px */
+    margin: 15px auto;  /* reduced margin */
     max-width: 1800px;
 }
 
@@ -106,20 +143,20 @@ nav {
    ---------------------------- */
 .portfolio-cta {
     text-align: center;
-    margin: 15px 0;  /* changed vertical margin to 15px */
+    margin: 15px 0;  /* reduced vertical margin */
 }
 
 .portfolio-cta h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 2rem;
     color: #1e3a8a;
-    margin-bottom: 15px;  /* changed from 10px to 15px */
+    margin-bottom: 15px;  /* reduced spacing below heading */
 }
 
 .portfolio-cta p {
     font-size: 1.1em;
     color: #555;
-    margin-bottom: 15px;  /* changed from 20px to 15px */
+    margin-bottom: 15px;  /* reduced spacing below paragraph */
 }
 
 .portfolio-cta button.cta-button {
@@ -138,13 +175,13 @@ nav {
 }
 
 /* ----------------------------
-   FOOTER
+   FOOTER – keep as is
    ---------------------------- */
 footer {
     background-color: #1e3a8a;
     color: white;
     text-align: center;
-    padding: 15px 0;  /* kept as 15px for consistency */
+    padding: 15px 0;
     font-size: 0.9em;
 }
 
@@ -154,22 +191,22 @@ footer {
 
 /* Desktop widescreen (1200px and up) */
 @media (min-width: 1200px) {
-    .gallery-grid { grid-template-columns: repeat(4, minmax(200px, 1fr)); gap: 15px; } /* changed gap */
+    .gallery-grid { grid-template-columns: repeat(4, minmax(200px, 1fr)); gap: 15px; }
     .site-title h1 { font-size: 2.2rem; }
     .portfolio-cta h2 { font-size: 2.1rem; }
 }
 
 /* Laptop (992px – 1199px) */
 @media (max-width: 1199px) and (min-width: 992px) {
-    .gallery-grid { grid-template-columns: repeat(3, 1fr); gap: 15px; }  /* changed gap */
+    .gallery-grid { grid-template-columns: repeat(3, 1fr); gap: 15px; }
     .portfolio-cta button.cta-button { padding: 11px 22px; font-size: 15px; }
 }
 
 /* Tablet (768px – 991px) */
 @media (max-width: 991px) and (min-width: 768px) {
-    .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }  /* changed gap */
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
     .site-title h1 { font-size: 1.8rem; }
-    .portfolio-cta { margin-top: 15px; }  /* changed from 40px */
+    .portfolio-cta { margin-top: 15px; }
 }
 
 /* Mobile (below 768px) */
@@ -177,7 +214,7 @@ footer {
     nav { text-align: center; }
     .nav-links { display: block; margin: 1rem 0 0 0; }
     .nav-links li { display: block; margin: 0.5rem 0; }
-    .gallery-grid { grid-template-columns: 1fr; gap: 15px; } /* changed gap */
+    .gallery-grid { grid-template-columns: 1fr; gap: 15px; }
     .site-title h1 { font-size: 1.5rem; }
     .site-title p { font-size: 1rem; }
     .portfolio-cta button.cta-button { padding: 10px 14px; font-size: 14px; width: auto; }
