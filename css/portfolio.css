@@ -23,6 +23,15 @@ body {
     flex-direction: column;
 }
 
+p {
+    margin-bottom: 0.5rem; /* reduce space below text */
+}
+
+img {
+    margin-top: 0; /* remove space above the image */
+    display: block; /* removes inline spacing */
+}
+
 /* ----------------------------
    PAGE WRAPPER
    ---------------------------- */
