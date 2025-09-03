@@ -124,7 +124,7 @@ nav {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(250px, 1fr));
-    gap: 5px;   /* reduced spacing */
+    gap: 10px;   /* reduced spacing */
     justify-content: center;
     margin: 5px auto;  /* reduced margin */
     max-width: 1800px;
@@ -141,10 +141,10 @@ nav {
 }
 
 .gallery-item img {
-    width: calc(100% - 40px);  /* full width minus 15px padding each side */
+    width: calc(100% - 30px);  /* full width minus 15px padding each side */
     height: auto;
     display: block;
-    margin: 20px;            /* 15px space on left and right */
+    margin: 15px;            /* 15px space on left and right */
     transition: transform 0.3s ease;
 }
 
@@ -210,10 +210,10 @@ footer {
 
 /* Desktop widescreen (1200px and up) */
 @media (min-width: 1200px) {
-    .gallery-grid { grid-template-columns: repeat(4, minmax(250px, 1fr)); gap: 5px; }
+    .gallery-grid { grid-template-columns: repeat(4, minmax(250px, 1fr)); gap: 10px; }
     .site-title h1 { font-size: 2rem; }
     .portfolio-cta h2 { font-size: 1.5rem; }
-    margin: 0 20px;  /* 15px left and right padding for desktop */
+    margin: 0 10px;  /* 15px left and right padding for desktop */
 }
 
 /* Laptop (992px – 1199px) */
