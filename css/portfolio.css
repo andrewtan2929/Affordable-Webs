@@ -196,16 +196,6 @@ nav {
 /* ----------------------------
    FOOTER – keep as is
    ---------------------------- */
-html, body {
-  height: 100%;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* full viewport height */
-}
-
 .page-wrapper {
   flex: 1;
   display: flex;
