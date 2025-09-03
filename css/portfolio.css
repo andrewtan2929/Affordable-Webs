@@ -141,10 +141,10 @@ nav {
 }
 
 .gallery-item img {
-    width: calc(100% - 30px);  /* full width minus 15px padding each side */
+    width: calc(100% - 10px);  /* full width minus 15px padding each side */
     height: auto;
     display: block;
-    margin: 15px;            /* 15px space on left and right */
+    margin: 5px;            /* 15px space on left and right */
     transition: transform 0.3s ease;
 }
 
