@@ -30,7 +30,7 @@ p {
 img {
     margin-top: 0;
     display: block;
-    width: 95%;   /* reduces width by 5% */
+    width: 85%;   /* reduces width by 5% */
     height: auto; /* keeps aspect ratio */
 }
 
