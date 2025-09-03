@@ -124,7 +124,7 @@ nav {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(250px, 1fr));
-    gap: 28px;   /* reduced spacing */
+    gap: 5px;   /* reduced spacing */
     justify-content: center;
     margin: 5px auto;  /* reduced margin */
     max-width: 1800px;
@@ -210,7 +210,7 @@ footer {
 
 /* Desktop widescreen (1200px and up) */
 @media (min-width: 1200px) {
-    .gallery-grid { grid-template-columns: repeat(4, minmax(250px, 1fr)); gap: 28px; }
+    .gallery-grid { grid-template-columns: repeat(4, minmax(250px, 1fr)); gap: 5px; }
     .site-title h1 { font-size: 2rem; }
     .portfolio-cta h2 { font-size: 1.5rem; }
     margin: 0 20px;  /* 15px left and right padding for desktop */
