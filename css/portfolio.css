@@ -30,7 +30,7 @@ p {
 img {
     margin-top: 0;
     display: block;
-    width: 70%;   /* reduces width by 5% */
+    width: 80%;   /* reduces width by 5% */
     height: auto; /* keeps aspect ratio */
 }
 
@@ -142,7 +142,7 @@ nav {
 }
 
 .gallery-item img {
-    width: 70%;
+    width: 80%;
     height: auto;
     display: block;
     transition: transform 0.3s ease;
