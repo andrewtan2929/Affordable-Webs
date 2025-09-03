@@ -204,6 +204,13 @@ footer {
     font-size: 0.9em;
 }
 
+.page-wrapper {
+  flex: 1; /* pushes footer down */
+  display: flex;
+  flex-direction: column;
+}
+
+
 /* ============================================================
    RESPONSIVE MEDIA QUERIES
    ============================================================ */
