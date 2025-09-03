@@ -86,6 +86,11 @@ nav {
     color: #f0c330;
 }
 
+.section-wrapper { /* or whatever parent div */
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 /* ----------------------------
    SITE TITLE – pulled closer to nav
    ---------------------------- */
