@@ -36,9 +36,10 @@ body {
    NAVIGATION BAR – tightened vertical spacing
    ---------------------------- */
 nav {
-    background-color: #0a2a43;
-    padding: 0;  /* aggressively reduced top/bottom padding */
-    text-align: left;
+  background-color: #0a2a43;
+  padding: 0.5rem 2rem;
+  text-align: left;
+  margin-top: 10px; /* from earlier nav */
 }
 
 .nav-logo {
