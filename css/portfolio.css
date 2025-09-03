@@ -123,8 +123,8 @@ nav {
    ---------------------------- */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(230px, 1fr));
-    gap: 15px;   /* reduced spacing */
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
+    gap: 28px;   /* reduced spacing */
     justify-content: center;
     margin-top: 5px;  /* pulls grid closer to the site-title */
     margin: 0px auto;  /* reduced margin */
@@ -210,7 +210,7 @@ footer {
 
 /* Desktop widescreen (1200px and up) */
 @media (min-width: 1200px) {
-    .gallery-grid { grid-template-columns: repeat(4, minmax(230px, 1fr)); gap: 15px; }
+    .gallery-grid { grid-template-columns: repeat(4, minmax(250px, 1fr)); gap: 28px; }
     .site-title h1 { font-size: 2rem; }
     .portfolio-cta h2 { font-size: 1.5rem; }
 }
