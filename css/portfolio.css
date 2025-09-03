@@ -141,7 +141,7 @@ nav {
 }
 
 .gallery-item img {
-    width: calc(100% - 40px);  /* full width minus 15px padding each side */
+    width: calc(100% - 10px);  /* full width minus 15px padding each side */
     height: auto;
     display: block;
     margin: 20px;            /* 15px space on left and right */
